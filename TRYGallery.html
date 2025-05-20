@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gallery</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #b1170cec, #8c1c0bdd);
+        color: #eee;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 60px 20px;
+      }
+
+      .gallery-container {
+        background: #f7634f2f;
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        padding: 40px;
+        max-width: 1300px;
+        width: 100%;
+        box-shadow: 0 8px 32px rgb(251, 248, 248);
+        border: 1px solid rgb(255, 255, 255);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 15px;
+        background: rgba(252, 3, 3, 0.03);
+        border-radius: 12px;
+        width: 100%;
+        margin-bottom: 25px;
+        user-select: none;
+      }
+
+      nav a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1rem;
+        position: relative;
+        transition: color 0.3s ease;
+      }
+
+      nav a::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: #f7634f2f;
+        transition: width 0.3s ease;
+      }
+
+      nav a:hover,
+      nav a:focus {
+        color: #fff;
+        outline: none;
+      }
+
+      nav a:hover::after,
+      nav a:focus::after {
+        width: 100%;
+      }
+
+      h2 {
+        font-size: 2.25rem;
+        margin: 0 0 10px 0;
+        color: #fff;
+        border-bottom: 2px solid #ffffff;
+        padding-bottom: 8px;
+        align-self: flex-start;
+      }
+
+      p {
+        font-size: 1.1rem;
+        color: #ccc;
+        max-width: 700px;
+        margin: 0 0 30px 0;
+        align-self: flex-start;
+      }
+
+      #playBtn {
+        background-color: #f7634f2f;
+        border: none;
+        color: #ffffff;
+        padding: 12px 28px;
+        font-size: 1rem;
+        font-weight: 600;
+        border-radius: 12px;
+        cursor: pointer;
+        box-shadow: 0 4px 15px rgba(160, 186, 15, 0.6);
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        align-self: flex-start;
+        margin-bottom: 30px;
+        user-select: none;
+      }
+
+      #playBtn:hover,
+      #playBtn:focus {
+        background-color: #1992b08d;
+        box-shadow: 0 6px 20px rgba(58, 163, 224, 0.8);
+        outline: none;
+      }
+
+      #playBtn:active {
+        background-color: #f7634f2f;
+        box-shadow: 0 2px 10px rgba(50, 136, 197, 0.9);
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 20px;
+        width: 100%;
+      }
+
+      .gallery-grid img,
+      .gallery-grid video {
+        width: 100%;
+        height: 200px;
+        border-radius: 12px;
+        object-fit: cover;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+        cursor: pointer;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+        background-color: #8c8a8a;
+      }
+
+      .gallery-grid img:hover,
+      .gallery-grid video:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gallery-container">
+      <nav>
+        <a href="home.html">Home</a>
+        <a href="TRYaboutme.html">About</a>
+        <a href="TRYGallery.html" id="gallery-link">Gallery</a>
+        <a href="Contact.html">Contact</a>
+        <a href="Dash.html">Dashboard</a>
+        <a href="Menu.html">Menu</a>
+      </nav>
+
+      <h2>The Gallery</h2>
+      <p>Favorite Artist, Player and Music</p>
+
+      <button id="playBtn" aria-label="Play all videos">Play All Videos</button>
+
+      <div class="gallery-grid">
+        <img src="cole.webp" alt="Photo 1" />
+        <img
+          src="https://townsquare.media/site/812/files/2022/10/attachment-kendrick-lamar-live-in-paris-livestream.jpg?w=780&q=75"
+          alt="Photo 2"
+        />
+        <img
+          src="https://static01.nyt.com/images/2020/02/02/sports/02kobe-essay-lede/merlin_93708212_ff16a83c-391b-4b25-a4d5-77eaf0cbbb20-articleLarge.jpg?quality=75&auto=webp&disable=upscale"
+          alt="Photo 3"
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbX1bq-urDpQKDO1IAD2sSnhGtDTulRnQFmQ&s"
+          alt="Photo 4"
+        />
+
+        <video src="videoplayback.mp4" class="vid" controls></video>
+        <video src="Vid2.mp4" class="vid" controls></video>
+        <video src="Vid3.mp4" class="vid" controls></video>
+        <video src="Vid4.mp4" class="vid" controls></video>
+      </div>
+    </div>
+
+    <script>
+      const playBtn = document.getElementById("playBtn");
+      const videos = document.querySelectorAll(".vid");
+
+      playBtn.addEventListener("click", () => {
+        const anyPlaying = Array.from(videos).some(
+          (video) => !video.paused && !video.ended
+        );
+
+        if (anyPlaying) {
+          videos.forEach((video) => video.pause());
+          playBtn.textContent = "Play All Videos";
+        } else {
+          videos.forEach((video) => {
+            video.play().catch(() => {});
+          });
+          playBtn.textContent = "Pause All Videos";
+        }
+      });
+    </script>
+  </body>
+</html>

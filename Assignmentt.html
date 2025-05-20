@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>School Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #7e0d05ec, #8c1c0bdd);
+        color: #eee;
+        display: flex;
+        min-height: 100vh;
+      }
+
+      aside {
+        width: 240px;
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 30px 20px;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      aside h2 {
+        font-size: 22px;
+        color: #ffffff;
+        margin-bottom: 30px;
+        border-bottom: 2px solid #ffffff;
+        padding-bottom: 10px;
+      }
+
+      nav a {
+        display: block;
+        padding: 12px 15px;
+        margin-bottom: 10px;
+        text-decoration: none;
+        color: #ffffff;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        font-weight: bold;
+        position: relative;
+      }
+
+      nav a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #fff;
+      }
+
+      main {
+        flex: 1;
+        padding: 40px;
+      }
+
+      .topbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px;
+      }
+
+      .topbar h1 {
+        font-size: 28px;
+        color: #fff;
+      }
+
+      .user-info {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .user-info span {
+        color: #ccc;
+      }
+
+      .user-info img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 2px solid #ffffff;
+      }
+
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 30px;
+      }
+
+      .card {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(8px);
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        text-align: center;
+      }
+
+      .card h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: #fff;
+      }
+
+      .card p {
+        font-size: 28px;
+        font-weight: bold;
+        color: #f7634f2f;
+      }
+
+      .assignment-section {
+        margin-top: 40px;
+      }
+
+      .assignment-section h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #fff;
+        border-bottom: 2px solid #f7634f2f;
+        display: inline-block;
+        padding-bottom: 5px;
+      }
+
+      .assignment-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+      }
+
+      .assignment-card {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(6px);
+        padding: 20px;
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+        color: #fff;
+        transition: transform 0.2s ease;
+      }
+
+      .assignment-card:hover {
+        transform: translateY(-4px);
+      }
+
+      .assignment-card h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: #ffffff;
+      }
+
+      .assignment-card span {
+        display: inline-block;
+        margin-top: 8px;
+        color: #ccc;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <aside>
+      <h2>Student Portal</h2>
+      <nav>
+        <a href="Dash.html"><i class="fas fa-home"></i> Home</a>
+        <a href="Gradee.html"><i class="fas fa-chart-line"></i> Grades</a>
+        <a href="Assignmentt.html"><i class="fas fa-tasks"></i> Assignments</a>
+        <a href="Schedulee.html"
+          ><i class="fas fa-calendar-alt"></i> Schedule</a
+        >
+        <a href="home.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+      </nav>
+    </aside>
+
+    <main>
+      <div class="topbar">
+        <h1>Hi, it's Chester Malabanan</h1>
+        <div class="user-info">
+          <span>Chester Malabanan</span>
+          <img src="adu.jpeg" alt="Avatar" />
+        </div>
+      </div>
+
+      <section class="" id="">
+        <h2><i class=""></i> Tasks</h2>
+        <div class="assignment-cards">
+          <div class="assignment-card">
+            <h3>Reporting on Applied Chemistry</h3>
+            <span>May 18, 2025</span>
+          </div>
+          <div class="assignment-card">
+            <h3>Review on Quantitative Methods</h3>
+            <span>May 20, 2025</span>
+          </div>
+          <div class="assignment-card">
+            <h3>Submit Position Paper</h3>
+            <span>May 22, 2025</span>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,203 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #7e0d05ec, #8c1c0bdd);
+      padding: 60px 20px;
+      color: #eee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .about-container {
+      background: #f7634f2f;
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 700px;
+      width: 100%;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgb(255, 255, 255);
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 15px;
+      background: #f7634f2f;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+   nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #f7634f2f;     
+  transition: width 0.3s ease;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+
+    header {
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 36px;
+      color: #fff;
+      margin-bottom: 10px;
+      display: inline-block;        
+      border-bottom: 2px solid #ffffff;
+    }
+    
+
+    header p {
+      font-size: 16px;
+      color: #ccc;
+    }
+
+    .about-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .about-photo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+      border: 2px solid #c91919a8;
+    }
+
+    .about-content p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #ccc;
+      max-width: 600px;
+      text-align: center;
+    }
+
+    .contact-button {
+      display: inline-block;
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(to right, 130deg, #f60f077a, #fff5f4dd);
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s ease;
+      margin-top: 20px;
+    }
+
+    .contact-button:hover {
+      background: linear-gradient(to right, 130deg, #de0606, #ff0707fe);
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      color: #fff;
+      text-decoration: none;
+      font-size: 24px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .social-icons .instagram {
+      background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    }
+
+    .social-icons .facebook {
+      background: #333abd;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="about-container">
+
+    <header>
+      <nav>
+        <a href="home.html">Home</a>
+        <a href="TRYaboutme.html">About</a>
+        <a href="TRYGallery.html">Gallery</a>
+        <a href="Contact.html">Contact</a>
+        <a href="Dash.html">Dashboard</a>
+        <a href="Menu.html">Menu</a>
+      </nav>
+
+      <h1>About Me</h1>
+      <p>Discover the purpose and enthusiasm behind contemporary web creation!!</p>
+    </header>
+
+    <div class="about-content">
+      <img src="adu.jpeg" alt="Your Photo" class="about-photo" />
+      <p>
+        Greetings to my site! I’m an enthusiastic I.T. student with a passion for design, technology, and contemporary web development. This website aims to provide valuable insights on HTML5 and innovative web methods for learners and budding developers.
+      </p>
+
+      <div class="social-icons">
+        <a href="https://www.instagram.com/yerqqqs/" target="_blank" class="instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/cjmalabanankb" target="_blank" class="facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </div>
+
+      <a href="Contact.html" class="contact-button">Contact Me</a>
+    </div>
+  </div>
+
+</body>
+</html>
