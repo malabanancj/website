@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(130deg, #7e0d05ec, #8c1c0bdd);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        color: #eee;
+      }
+
+      .contact-container {
+        background: #f7634f2f;
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        padding: 40px;
+        max-width: 520px;
+        width: 100%;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgb(255, 255, 255);
+      }
+
+      h2 {
+        font-size: 30px;
+        margin-bottom: 25px;
+        border-bottom: 2px solid #ffffff;
+        display: inline-block;
+        padding-bottom: 5px;
+      }
+
+      input,
+      textarea {
+        width: 93%;
+        padding: 14px 18px;
+        margin-bottom: 20px;
+        border: none;
+        border-radius: 12px;
+        background-color: #f7634f2f;
+        color: #fff;
+        font-size: 16px;
+        transition: 0.3s ease;
+      }
+
+      input::placeholder,
+      textarea::placeholder {
+        color: #ccc;
+      }
+
+      input:focus,
+      textarea:focus {
+        outline: none;
+        background-color: #f7634f2f;
+        box-shadow: 0 0 0 2px #f74f4f;
+      }
+
+      button {
+        width: 100%;
+        padding: 14px;
+        background: linear-gradient(to right, #f7634f2f, #f7634f2f);
+        color: #fff;
+        border: none;
+        border-radius: 30px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      button:hover {
+        background: linear-gradient(to right, #f7634f2f, #9575cd);
+      }
+
+      .map-section {
+        margin-top: 40px;
+      }
+
+      .map-section h3 {
+        margin-bottom: 10px;
+        font-size: 20px;
+        color: #fff;
+      }
+
+      .map-section p {
+        margin-bottom: 15px;
+        color: #ccc;
+      }
+
+      nav {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 15px;
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 12px;
+        margin-bottom: 25px;
+      }
+
+      nav a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+        position: relative;
+      }
+
+      nav a::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: #ffffff;
+        transition: width 0.3s ease;
+      }
+
+      nav a:hover {
+        color: #fff;
+      }
+
+      nav a:hover::after {
+        width: 100%;
+      }
+
+      iframe {
+        width: 100%;
+        height: 300px;
+        border: none;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contact-container">
+      <nav>
+        <a href="home.html">Home</a>
+        <a href="TRYaboutme.html">About</a>
+        <a href="TRYGallery.html">Gallery</a>
+        <a href="Contact.html">Contact</a>
+        <a href="Dash.html">Dashboard</a>
+        <a href="Menu.html">Menu</a>
+      </nav>
+
+      <h2>Contact Me</h2>
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="email" id="email" placeholder="Your Email" required />
+        <textarea
+          id="message"
+          rows="4"
+          placeholder="Your Message"
+          required
+        ></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+
+      <script>
+        const form = document.getElementById("contactForm");
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          alert("Message Sent!");
+
+          form.reset();
+        });
+      </script>
+
+      <div class="map-section">
+        <h3>How to Get Here</h3>
+        <p>Visit at 900 San Marcelino St, Ermita, Manila via Google Maps:</p>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.634356197661!2d120.98908401535804!3d14.582578781265494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397ca2113b17991%3A0x5b3ad276fd1183c1!2s900%20San%20Marcelino%20St%2C%20Ermita%2C%20Manila%2C%201000%20Metro%20Manila!5e0!3m2!1sen!2sph!4v1688911441584!5m2!1sen!2sph"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        >
+        </iframe>
+      </div>
+    </div>
+  </body>
+</html>
