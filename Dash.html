@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>School Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #7e0d05ec, #8c1c0bdd);
+        color: #eee;
+        display: flex;
+        min-height: 100vh;
+      }
+
+      aside {
+        width: 240px;
+        background: #f7634f2f;
+        backdrop-filter: blur(10px);
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 30px 20px;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      aside h2 {
+        font-size: 22px;
+        color: #fff;
+        margin-bottom: 30px;
+        border-bottom: 2px solid #ffffff;
+        padding-bottom: 10px;
+      }
+
+      nav a {
+        display: block;
+        padding: 12px 15px;
+        margin-bottom: 10px;
+        text-decoration: none;
+        color: #ffffff;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        font-weight: bold;
+        position: relative;
+      }
+
+      nav a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #fff;
+      }
+
+      main {
+        flex: 1;
+        padding: 40px;
+      }
+
+      .topbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px;
+      }
+
+      .topbar h1 {
+        font-size: 28px;
+        color: #fff;
+      }
+
+      .user-info {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .user-info span {
+        color: #ccc;
+      }
+
+      .user-info img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 2px solid #ffffff;
+      }
+
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 30px;
+      }
+
+      .card {
+        background: rgba(241, 24, 24, 0.6);
+        backdrop-filter: blur(8px);
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        border: 1px solid rgb(255, 255, 255);
+        text-align: center;
+      }
+
+      .card h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: #fff;
+      }
+
+      .card p {
+        font-size: 28px;
+        font-weight: bold;
+        color: #ffffff;
+      }
+    </style>
+  </head>
+  <body>
+    <aside>
+      <h2>Student Portal</h2>
+      <nav>
+        <a href="Dash.html"><i class="fas fa-home"></i> Home</a>
+        <a href="Gradee.html"><i class="fas fa-chart-line"></i> Grades</a>
+        <a href="Assignmentt.html"><i class="fas fa-tasks"></i> Assignments</a>
+        <a href="Schedulee.html"
+          ><i class="fas fa-calendar-alt"></i> Schedule</a
+        >
+        <a href="home.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+      </nav>
+    </aside>
+
+    <main>
+      <div class="topbar">
+        <h1>Hi, it's Chester Malabanan</h1>
+        <div class="user-info">
+          <span>Chester Malabanan</span>
+          <img src="adu.jpeg" alt="Avatar" />
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Current GPA</h3>
+          <p>3.00</p>
+        </div>
+        <div class="card">
+          <h3>quizzes</h3>
+          <p>4</p>
+        </div>
+        <div class="card">
+          <h3>Exams</h3>
+          <p>2</p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
